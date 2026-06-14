@@ -77,6 +77,11 @@
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.oracle.database.spring</groupId>
+			<artifactId>oracle-spring-boot-starter-wallet</artifactId>
+			<version>24.4.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
