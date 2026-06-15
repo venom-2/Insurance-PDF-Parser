@@ -1,5 +1,6 @@
 package com.pdf.parser.customer.service;
 
+import com.pdf.parser.common.exception.CustomerNotFoundException;
 import com.pdf.parser.common.translator.CustomerTranslator;
 import com.pdf.parser.customer.dto.CustomerRequest;
 import com.pdf.parser.customer.dto.CustomerResponse;
@@ -25,7 +26,7 @@ public class CustomerService {
     public CustomerResponse getCustomer(Long id) {
         Customer customer = customerRepository.findById(id)
                 .orElseThrow(() ->
-                        new RuntimeException("Customer not found"));
+                        new CustomerNotFoundException(id));
 
         return customerTranslator.toCustomerResponse(customer);
     }
