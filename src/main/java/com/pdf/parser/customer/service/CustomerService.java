@@ -33,6 +33,8 @@ public class CustomerService {
 
     public CustomerResponse saveCustomer(CustomerRequest request) {
         Customer customer = customerTranslator.toCustomer(request);
+        // Explicitly set active status true
+        customer.setActive(true);
         return customerTranslator.toCustomerResponse(customerRepository.save(customer));
     }
 }

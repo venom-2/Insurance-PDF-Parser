@@ -3,7 +3,6 @@ package com.pdf.parser.common.translator;
 import com.pdf.parser.customer.dto.CustomerRequest;
 import com.pdf.parser.customer.dto.CustomerResponse;
 import com.pdf.parser.customer.entity.Customer;
-import jakarta.validation.Valid;
 import org.springframework.stereotype.Component;
 import tools.jackson.databind.ObjectMapper;
 
